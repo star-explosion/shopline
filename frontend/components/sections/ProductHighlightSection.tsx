@@ -1,12 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import { Product } from "@/types";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 interface Props {
   products: Product[];
 }
 
 export default function ProductHighlightSection({ products }: Props) {
+  const t = useTranslations("products");
   const featured = products.slice(0, 3);
 
   return (
@@ -15,24 +19,19 @@ export default function ProductHighlightSection({ products }: Props) {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-8 sm:mb-12 gap-3">
           <div>
-            <p className="text-xs tracking-[0.3em] text-[#C6A86B] mb-3">FLAGSHIP PRODUCTS</p>
+            <p className="text-xs tracking-[0.3em] text-[#C6A86B] mb-3">{t("eyebrow")}</p>
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-[#111111]">
-              旗舰产品系列
+              {t("title")}
             </h2>
           </div>
           <Link
             href="/products"
             className="text-sm text-[#6B6B6B] hover:text-[#111111] tracking-widest border-b border-[#E2DDD6] hover:border-[#111111] pb-0.5 transition-colors self-start sm:self-auto"
           >
-            查看全部产品 →
+            {t("viewAll")}
           </Link>
         </div>
 
-        {/* Product grid
-            Mobile  (<640px):  1 column, show first 2 products
-            Tablet  (640–1023): 2 columns, show 2 products (3rd hidden)
-            Desktop (1024px+): 3 columns, all 3 shown
-        */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {featured.map((product, i) => (
             <Link
@@ -54,19 +53,19 @@ export default function ProductHighlightSection({ products }: Props) {
                 />
                 {i === 0 && (
                   <span className="absolute top-4 left-4 bg-[#C6A86B] text-white text-[10px] tracking-widest px-3 py-1">
-                    热销首选
+                    {t("hotLabel")}
                   </span>
                 )}
                 {i === 2 && (
                   <span className="absolute top-4 left-4 bg-[#111111] text-white text-[10px] tracking-widest px-3 py-1">
-                    旗舰款
+                    {t("flagshipLabel")}
                   </span>
                 )}
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-[10px] text-[#C6A86B] border border-[#C6A86B] px-2 py-0.5 tracking-wider">
-                    酒店同款
+                    {t("hotelBadge")}
                   </span>
                 </div>
                 <h3 className="font-semibold text-[#111111] text-sm mb-1 group-hover:text-[#C6A86B] transition-colors">

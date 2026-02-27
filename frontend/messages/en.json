@@ -56,7 +56,37 @@
     "viewAll2": "View Full Collection",
     "collection": "Products",
     "collectionDesc": "Every product is rigorously validated to deliver the sleep experience of a five-star hotel",
-    "total": "{count} products"
+    "total": "{count} products",
+    "filterAll": "All Products",
+    "filterLatex": "Latex Mattress",
+    "filterSpring": "Spring Mattress",
+    "filterCoconut": "Coconut Palm Mattress",
+    "filterHotel": "Hotel Grade",
+    "emptyState": "No products found. Please ensure the backend is running.",
+    "trustISO": "ISO Dual Certified",
+    "trustISOSub": "International Quality",
+    "trustWarranty": "10-Year Warranty",
+    "trustWarrantySub": "After-sales covered",
+    "trustShipping": "Free Delivery",
+    "trustShippingSub": "Installation included",
+    "trustTrial": "30-Day Trial",
+    "trustTrialSub": "Easy returns",
+    "lowStockBadge": "Low Stock",
+    "comparisonTitle": "MARKET COMPARISON",
+    "comparisonMarket": "Similar hotel mattress market price",
+    "comparisonImport": "Import brand average",
+    "comparisonDirect": "Our direct price",
+    "savedAmount": "Saved ¥{amount}",
+    "savedVsMarket": "Savings vs. market",
+    "redirecting": "Redirecting to payment...",
+    "redirectingShort": "Redirecting...",
+    "redirectingFinal": "Redirecting...",
+    "soldOutShort": "Sold Out",
+    "addToCart": "Add to Cart",
+    "finalCtaEyebrow": "UPGRADE YOUR SLEEP TONIGHT",
+    "finalCtaTitle": "Upgrade Your Sleep Tonight",
+    "finalCtaSub": "Hotel-grade experience, starting tonight",
+    "finalCtaTrust": "ISO Certified · 5-Year Warranty · 30-Day Trial · Free Nationwide Delivery"
   },
   "cart": {
     "title": "Shopping Bag",
@@ -112,9 +142,12 @@
     "title": "Real Customer Stories",
     "subtitle": "Sleep improvement stories from verified buyers across the country",
     "verified": "Verified",
+    "verifiedBadge": "Verified Purchase",
     "rating": "Overall Rating",
     "totalReviews": "Total Reviews",
-    "satisfaction": "Satisfaction Rate"
+    "satisfaction": "Satisfaction Rate",
+    "refundRate": "Refund Rate",
+    "certBadge": "Dual Certification"
   },
   "orders": {
     "title": "Order Confirmed",
@@ -198,14 +231,21 @@
     "taglines": {
       "R666": "Soft support, instant rebound — latex & spring combined",
       "R888": "Hotel-grade firm support, precise spinal alignment",
-      "R999": "Flagship latex — the ultimate sleep experience"
+      "R999": "Flagship latex — the ultimate sleep experience",
+      "default": "Hotel-grade sleep quality, direct from the factory"
     },
     "benefits": {
       "hotel": "Same supply as 5-star hotels",
       "latex": "Belgian natural latex imported",
       "spring": "Leggett & Platt independent pocket springs",
       "cert": "ISO9001 + ISO14001 dual certified"
-    }
+    },
+    "tabMaterial": "Materials",
+    "tabFeel": "Sleep Feel",
+    "tabTech": "Technology",
+    "tabMaterialContent": "The top layer uses premium Belgian natural latex for consistent, lasting elasticity. The middle layer features Leggett & Platt (USA) high-carbon steel independent pocket springs in a precision array with silent design. The base layer is high-density resin cotton for structural stability. Fabric uses Bekaert (Belgium) imported material with DuPont Teflon (USA) textile technology.",
+    "tabFeelContent": "From the moment you lie down, feel the gentle wrap of the latex layer as your body naturally settles into a supported position. When turning, each spring moves independently — zero disturbance to your partner. After 10 minutes, pressure points across your body are evenly released and your spine maintains its natural curve. Suitable for back, side, and all sleeping positions.",
+    "tabTechContent": "Independent pocket spring technology: spring density precisely configured by body pressure zone, high-carbon steel wire heat-treated at 250–280°C. Baland's patented comfort resin cotton and high-elasticity seven-hole fiber cotton provide multi-layer support. Antibacterial & anti-mite treatment: YiKang (Korea) professional agent with imported fire-retardant cotton fabric, certified fire-retardant."
   },
   "productCta": {
     "eyebrow": "READY TO SLEEP BETTER",

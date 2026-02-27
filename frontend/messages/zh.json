@@ -56,7 +56,37 @@
     "viewAll2": "查看全部系列",
     "collection": "产品系列",
     "collectionDesc": "每一款产品都经过严格的工艺验证，为您提供五星级酒店同款的睡眠体验",
-    "total": "共 {count} 款产品"
+    "total": "共 {count} 款产品",
+    "filterAll": "全部产品",
+    "filterLatex": "乳胶床垫",
+    "filterSpring": "弹簧床垫",
+    "filterCoconut": "椰棕床垫",
+    "filterHotel": "酒店工程款",
+    "emptyState": "暂无产品，请确保后端服务已启动",
+    "trustISO": "ISO双认证",
+    "trustISOSub": "国际质量保证",
+    "trustWarranty": "10年质保",
+    "trustWarrantySub": "售后无忧",
+    "trustShipping": "免费配送",
+    "trustShippingSub": "全国上门安装",
+    "trustTrial": "30天试睡",
+    "trustTrialSub": "不满意退换",
+    "lowStockBadge": "库存紧张",
+    "comparisonTitle": "MARKET COMPARISON",
+    "comparisonMarket": "同类酒店床垫市场价",
+    "comparisonImport": "进口品牌均价",
+    "comparisonDirect": "本款直供价",
+    "savedAmount": "已省 ¥{amount}",
+    "savedVsMarket": "相比市场价节省约",
+    "redirecting": "正在跳转到支付页面...",
+    "redirectingShort": "跳转支付...",
+    "redirectingFinal": "正在跳转...",
+    "soldOutShort": "已售罄",
+    "addToCart": "加入购物车",
+    "finalCtaEyebrow": "UPGRADE YOUR SLEEP TONIGHT",
+    "finalCtaTitle": "现在升级你的睡眠质量",
+    "finalCtaSub": "酒店级体验，从今晚开始",
+    "finalCtaTrust": "ISO认证品质 · 5年品质质保 · 30天无忧试睡 · 全国包邮安装"
   },
   "cart": {
     "title": "购物袋",
@@ -112,9 +142,12 @@
     "title": "真实用户好评",
     "subtitle": "来自全国各地真实购买用户的睡眠改善故事",
     "verified": "已核验",
+    "verifiedBadge": "已验证购买",
     "rating": "综合评分",
     "totalReviews": "累计好评",
-    "satisfaction": "好评率"
+    "satisfaction": "好评率",
+    "refundRate": "退款成功率",
+    "certBadge": "双认证品质"
   },
   "orders": {
     "title": "订单已确认",
@@ -198,14 +231,21 @@
     "taglines": {
       "R666": "轻柔包裹，回弹迅速，乳胶弹簧双重呵护",
       "R888": "酒店同款硬感，脊椎精准承托",
-      "R999": "旗舰乳胶，顶级睡眠体验"
+      "R999": "旗舰乳胶，顶级睡眠体验",
+      "default": "酒店级睡眠品质，源头工厂直供"
     },
     "benefits": {
-      "hotel": "五星酒店同款供货",
+      "hotel": "五星酒店同款供货来源",
       "latex": "比利时进口天然乳胶",
       "spring": "美国礼恩派独立袋装弹簧",
       "cert": "ISO9001 + ISO14001 双认证"
-    }
+    },
+    "tabMaterial": "材质结构",
+    "tabFeel": "睡感体验",
+    "tabTech": "技术说明",
+    "tabMaterialContent": "顶层采用比利时进口天然乳胶，弹性均匀持久。中层为美国礼恩派（Leggett & Platt）高碳钢独立袋装弹簧，精密排列，无噪音设计。底层为高密度树脂棉基座，稳定整体结构。面料选用比利时贝卡特（Bekaert）进口面料，搭配美国杜邦特立珑纺织工艺。",
+    "tabFeelContent": "入睡瞬间感受乳胶层的温柔包覆，自然沉入适度的支撑区间。翻身时弹簧独立运动，零干扰伴侣睡眠。躺下10分钟后，身体各压力点得到均衡释放，脊椎保持自然曲线，适合仰睡、侧睡及各类睡姿人群。",
+    "tabTechContent": "独立袋装弹簧技术：根据人体压力分区精准配置弹簧密度，高碳钢丝经250-280°C高温热处理。百兰专利双盈舒适树脂棉与高弹性七孔纤维棉提供多层舒适支撑。抗菌防螨处理：面料采用韩国颐康生化科技专业抗菌防螨剂，搭配进口阻燃纯棉布，通过防火阻燃检测。"
   },
   "productCta": {
     "eyebrow": "READY TO SLEEP BETTER",

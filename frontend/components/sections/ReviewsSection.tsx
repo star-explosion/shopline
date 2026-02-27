@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { mockReviews, Review } from "@/lib/mockReviews";
 
 function StarRow({ rating }: { rating: number }) {
@@ -19,7 +22,7 @@ function StarRow({ rating }: { rating: number }) {
   );
 }
 
-function ReviewCard({ review }: { review: Review }) {
+function ReviewCard({ review, verifiedBadge }: { review: Review; verifiedBadge: string }) {
   const initial = review.name.charAt(0);
   return (
     <div className="bg-[#1F1F1F] p-6 flex flex-col gap-4 hover:bg-[#242424] transition-colors duration-300">
@@ -27,7 +30,7 @@ function ReviewCard({ review }: { review: Review }) {
         <StarRow rating={review.rating} />
         {review.verified && (
           <span className="flex-shrink-0 text-[10px] text-[#C6A86B] border border-[#C6A86B]/40 px-2 py-0.5 tracking-wider">
-            ✓ 已验证购买
+            ✓ {verifiedBadge}
           </span>
         )}
       </div>
@@ -37,7 +40,6 @@ function ReviewCard({ review }: { review: Review }) {
       </blockquote>
 
       <div className="flex items-center gap-3 pt-3 border-t border-white/10">
-        {/* Avatar */}
         <div className="w-9 h-9 rounded-full bg-[#C6A86B]/20 border border-[#C6A86B]/40 flex items-center justify-center flex-shrink-0">
           <span className="text-sm font-semibold text-[#C6A86B]">{initial}</span>
         </div>
@@ -58,6 +60,7 @@ function ReviewCard({ review }: { review: Review }) {
 }
 
 export default function ReviewsSection() {
+  const t = useTranslations("reviews");
   const featured = mockReviews.slice(0, 6);
 
   return (
@@ -65,26 +68,26 @@ export default function ReviewsSection() {
       <div className="max-w-6xl mx-auto px-6 lg:px-10">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-xs tracking-[0.3em] text-[#C6A86B] mb-3">CUSTOMER REVIEWS</p>
+          <p className="text-xs tracking-[0.3em] text-[#C6A86B] mb-3">{t("eyebrow")}</p>
           <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
-            真实用户好评
+            {t("title")}
           </h2>
           <p className="text-white/40 text-sm max-w-md mx-auto leading-relaxed">
-            来自全国各地真实购买用户的睡眠改善故事
+            {t("subtitle")}
           </p>
         </div>
 
         {/* Cards — 3-col on desktop, horizontal scroll on mobile */}
         <div className="hidden md:grid md:grid-cols-3 gap-5">
           {featured.slice(0, 3).map((review) => (
-            <ReviewCard key={review.id} review={review} />
+            <ReviewCard key={review.id} review={review} verifiedBadge={t("verifiedBadge")} />
           ))}
         </div>
 
         {/* Desktop row 2 */}
         <div className="hidden md:grid md:grid-cols-3 gap-5 mt-5">
           {featured.slice(3, 6).map((review) => (
-            <ReviewCard key={review.id} review={review} />
+            <ReviewCard key={review.id} review={review} verifiedBadge={t("verifiedBadge")} />
           ))}
         </div>
 
@@ -92,7 +95,7 @@ export default function ReviewsSection() {
         <div className="md:hidden flex gap-4 overflow-x-auto pb-4 -mx-6 px-6 snap-x snap-mandatory">
           {featured.map((review) => (
             <div key={review.id} className="flex-shrink-0 w-[82vw] snap-start">
-              <ReviewCard review={review} />
+              <ReviewCard review={review} verifiedBadge={t("verifiedBadge")} />
             </div>
           ))}
         </div>
@@ -101,22 +104,22 @@ export default function ReviewsSection() {
         <div className="mt-10 border border-white/10 px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 text-center">
           <div>
             <p className="font-display text-2xl text-[#C6A86B]">4.9</p>
-            <p className="text-white/40 text-xs mt-0.5">综合评分</p>
+            <p className="text-white/40 text-xs mt-0.5">{t("rating")}</p>
           </div>
           <div className="hidden sm:block w-px h-8 bg-white/10" />
           <div>
             <p className="font-display text-2xl text-[#C6A86B]">100%</p>
-            <p className="text-white/40 text-xs mt-0.5">退款成功率</p>
+            <p className="text-white/40 text-xs mt-0.5">{t("refundRate")}</p>
           </div>
           <div className="hidden sm:block w-px h-8 bg-white/10" />
           <div>
             <p className="font-display text-2xl text-[#C6A86B]">98%</p>
-            <p className="text-white/40 text-xs mt-0.5">好评率</p>
+            <p className="text-white/40 text-xs mt-0.5">{t("satisfaction")}</p>
           </div>
           <div className="hidden sm:block w-px h-8 bg-white/10" />
           <div>
             <p className="font-display text-2xl text-[#C6A86B]">ISO²</p>
-            <p className="text-white/40 text-xs mt-0.5">双认证品质</p>
+            <p className="text-white/40 text-xs mt-0.5">{t("certBadge")}</p>
           </div>
         </div>
       </div>

@@ -56,7 +56,37 @@
     "viewAll2": "全コレクションを見る",
     "collection": "製品ライン",
     "collectionDesc": "すべての製品は厳格な品質検証を経て、5つ星ホテルと同等の睡眠体験を提供します",
-    "total": "{count}製品"
+    "total": "{count}製品",
+    "filterAll": "全製品",
+    "filterLatex": "ラテックスマットレス",
+    "filterSpring": "スプリングマットレス",
+    "filterCoconut": "ヤシマットレス",
+    "filterHotel": "ホテルグレード",
+    "emptyState": "製品が見つかりません。バックエンドが起動していることを確認してください。",
+    "trustISO": "ISOデュアル認証",
+    "trustISOSub": "国際品質保証",
+    "trustWarranty": "10年品質保証",
+    "trustWarrantySub": "アフターサービス",
+    "trustShipping": "送料無料",
+    "trustShippingSub": "設置込み",
+    "trustTrial": "30日間試用",
+    "trustTrialSub": "返品可能",
+    "lowStockBadge": "在庫わずか",
+    "comparisonTitle": "MARKET COMPARISON",
+    "comparisonMarket": "同類ホテルマットレス市場価格",
+    "comparisonImport": "輸入ブランド平均価格",
+    "comparisonDirect": "直販価格",
+    "savedAmount": "¥{amount}節約",
+    "savedVsMarket": "市場価格との差額",
+    "redirecting": "決済ページへ移動中...",
+    "redirectingShort": "移動中...",
+    "redirectingFinal": "移動中...",
+    "soldOutShort": "売り切れ",
+    "addToCart": "カートに追加",
+    "finalCtaEyebrow": "UPGRADE YOUR SLEEP TONIGHT",
+    "finalCtaTitle": "今夜から睡眠をアップグレード",
+    "finalCtaSub": "ホテルグレードの体験、今夜から",
+    "finalCtaTrust": "ISO認証 · 5年品質保証 · 30日間試用 · 全国送料無料"
   },
   "cart": {
     "title": "ショッピングバッグ",
@@ -112,9 +142,12 @@
     "title": "お客様の声",
     "subtitle": "全国各地の実際の購入者による睡眠改善ストーリー",
     "verified": "認証済み",
+    "verifiedBadge": "認証済み購入",
     "rating": "総合評価",
     "totalReviews": "総レビュー数",
-    "satisfaction": "満足度"
+    "satisfaction": "満足度",
+    "refundRate": "返金成功率",
+    "certBadge": "デュアル認証品質"
   },
   "orders": {
     "title": "注文確認",
@@ -198,14 +231,21 @@
     "taglines": {
       "R666": "柔らかな包み込み、素早い反発—ラテックスとスプリングの融合",
       "R888": "ホテル仕様のかため—脊椎を精密にサポート",
-      "R999": "フラッグシップラテックス—最高の睡眠体験"
+      "R999": "フラッグシップラテックス—最高の睡眠体験",
+      "default": "ホテルグレードの睡眠品質、工場から直接"
     },
     "benefits": {
       "hotel": "5つ星ホテルと同じ供給元",
       "latex": "ベルギー産天然ラテックス使用",
       "spring": "L&P社製ポケットコイルスプリング",
       "cert": "ISO9001 + ISO14001 デュアル認証"
-    }
+    },
+    "tabMaterial": "素材・構造",
+    "tabFeel": "寝心地",
+    "tabTech": "技術説明",
+    "tabMaterialContent": "トップ層はベルギー産天然ラテックスを使用し、均一で持続的な弾力性を提供します。中間層はLeggett & Platt（米国）の高炭素鋼独立ポケットスプリングを精密配列し、無音設計。底層は高密度レジンコットンで構造を安定させます。生地はBekaert（ベルギー）の輸入素材とDuPont Teflon（米国）の織物技術を使用しています。",
+    "tabFeelContent": "横になった瞬間、ラテックス層の優しい包み込みを感じ、自然に適切なサポートゾーンに沈み込みます。寝返りを打つ際もスプリングが独立して動き、パートナーの睡眠を妨げません。10分後には体の各圧力点が均等に解放され、脊椎が自然なカーブを保ちます。仰向け、横向き、あらゆる寝姿勢に対応。",
+    "tabTechContent": "独立ポケットスプリング技術：人体の圧力ゾーンに応じてスプリング密度を精密設定、250〜280°Cの高温熱処理済み高炭素鋼線。バランド特許の快適レジンコットンと高弾性七孔繊維コットンが多層サポートを提供。抗菌・防ダニ処理：YiKang（韓国）の専門剤と輸入難燃綿布を使用、防火難燃検査取得。"
   },
   "productCta": {
     "eyebrow": "READY TO SLEEP BETTER",

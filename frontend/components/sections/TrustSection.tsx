@@ -1,24 +1,30 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 export default function TrustSection() {
+  const t = useTranslations("trust");
+
   const certs = [
     {
       code: "ISO 9001",
-      name: "质量管理体系认证",
-      desc: "通过GB/T19001-2016 idt ISO9001:2015标准认证，弹簧床垫生产与销售全流程品控",
+      name: t("iso9001Name"),
+      desc: t("iso9001Desc"),
     },
     {
       code: "ISO 14001",
-      name: "环境管理体系认证",
-      desc: "通过ISO14001:2015环境管理体系认证，坚持绿色制造与可持续发展",
+      name: t("iso14001Name"),
+      desc: t("iso14001Desc"),
     },
     {
       code: "CPED",
-      name: "中国著名品牌",
-      desc: "经中国企业发展促进委员会评选，皇室百兰入选为中国著名品牌并重点培育推广",
+      name: t("cpedName"),
+      desc: t("cpedDesc"),
     },
     {
-      code: "阻燃",
-      name: "防火阻燃检测",
-      desc: "产品通过专业防火阻燃检测，面料采用进口阻燃纯棉布，安全性能达到行业高标准",
+      code: "FR",
+      name: t("fireName"),
+      desc: t("fireDesc"),
     },
   ];
 
@@ -27,12 +33,12 @@ export default function TrustSection() {
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-14">
-          <p className="text-xs tracking-[0.3em] text-[#C6A86B] mb-3">CERTIFICATION</p>
+          <p className="text-xs tracking-[0.3em] text-[#C6A86B] mb-3">{t("eyebrow")}</p>
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-[#111111] mb-4">
-            国际认证品质保障
+            {t("title")}
           </h2>
           <p className="text-[#6B6B6B] text-sm max-w-md mx-auto leading-relaxed">
-            每一张床垫均通过严格的国际认证体系，以工业级标准守护您的睡眠品质
+            {t("subtitle")}
           </p>
         </div>
 

@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ProductsPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "products" });
+  const tb = await getTranslations({ locale, namespace: "trustBar" });
   let data: ProductsResponse = { products: [], total: 0, page: 1, limit: 12 };
 
   try {
@@ -35,6 +36,14 @@ export default async function ProductsPage({ params }: Props) {
   } catch {
     // handled below
   }
+
+  const filterTags = [
+    t("filterAll"),
+    t("filterLatex"),
+    t("filterSpring"),
+    t("filterCoconut"),
+    t("filterHotel"),
+  ];
 
   return (
     <div>
@@ -50,7 +59,7 @@ export default async function ProductsPage({ params }: Props) {
       {/* Filter bar */}
       <div className="bg-[#F8F8F6] border-b border-[#E2DDD6]">
         <div className="max-w-6xl mx-auto px-6 lg:px-10 py-4 flex items-center gap-6 overflow-x-auto">
-          {["全部产品", "乳胶床垫", "弹簧床垫", "椰棕床垫", "酒店工程款"].map((tag, i) => (
+          {filterTags.map((tag, i) => (
             <button
               key={tag}
               className={`text-xs tracking-widest whitespace-nowrap pb-1 transition-colors ${
@@ -72,7 +81,7 @@ export default async function ProductsPage({ params }: Props) {
       <div className="max-w-6xl mx-auto px-6 lg:px-10 py-12">
         {data.products.length === 0 ? (
           <div className="text-center py-24">
-            <p className="text-[#6B6B6B] text-sm">暂无产品，请确保后端服务已启动</p>
+            <p className="text-[#6B6B6B] text-sm">{t("emptyState")}</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -88,10 +97,10 @@ export default async function ProductsPage({ params }: Props) {
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { title: "ISO双认证", sub: "国际质量保证" },
-              { title: "10年质保", sub: "售后无忧" },
-              { title: "免费配送", sub: "全国上门安装" },
-              { title: "30天试睡", sub: "不满意退换" },
+              { title: tb("hotel"), sub: tb("hotelSub") },
+              { title: tb("warranty"), sub: tb("warrantySub") },
+              { title: tb("shipping"), sub: tb("shippingSub") },
+              { title: tb("returns"), sub: tb("returnsSub") },
             ].map((b) => (
               <div key={b.title}>
                 <p className="text-sm font-semibold text-[#111111] mb-1">{b.title}</p>

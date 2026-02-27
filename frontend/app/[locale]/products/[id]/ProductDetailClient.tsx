@@ -24,33 +24,6 @@ interface Props {
   product: Product;
 }
 
-const TAB_LABELS = ["材质结构", "睡感体验", "技术说明"] as const;
-type Tab = (typeof TAB_LABELS)[number];
-
-const tabContent: Record<Tab, string> = {
-  材质结构:
-    "顶层采用比利时进口天然乳胶，弹性均匀持久。中层为美国礼恩派（Leggett & Platt）高碳钢独立袋装弹簧，精密排列，无噪音设计。底层为高密度树脂棉基座，稳定整体结构。面料选用比利时贝卡特（Bekaert）进口面料，搭配美国杜邦特立珑纺织工艺。",
-  睡感体验:
-    "入睡瞬间感受乳胶层的温柔包覆，自然沉入适度的支撑区间。翻身时弹簧独立运动，零干扰伴侣睡眠。躺下10分钟后，身体各压力点得到均衡释放，脊椎保持自然曲线，适合仰睡、侧睡及各类睡姿人群。",
-  技术说明:
-    "独立袋装弹簧技术：根据人体压力分区精准配置弹簧密度，高碳钢丝经250-280°C高温热处理。百兰专利双盈舒适树脂棉与高弹性七孔纤维棉提供多层舒适支撑。抗菌防螨处理：面料采用韩国颐康生化科技专业抗菌防螨剂，搭配进口阻燃纯棉布，通过防火阻燃检测。",
-};
-
-// Per-product taglines keyed on model code
-const TAGLINES: Record<string, string> = {
-  "R-666": "轻柔包裹，回弹迅速，乳胶弹簧双重呵护",
-  "R-888": "酒店同款硬感，脊椎精准承托",
-  "R-999": "旗舰乳胶，顶级睡眠体验",
-};
-
-// Key benefits shown as bullet points in the hero
-const KEY_BENEFITS = [
-  "五星酒店同款供货来源",
-  "比利时进口天然乳胶",
-  "美国礼恩派独立袋装弹簧",
-  "ISO9001 + ISO14001 双认证",
-];
-
 const GUEST_USER_ID = 1;
 
 const PLACEHOLDER_SRC =
@@ -60,17 +33,21 @@ function computeOriginalPrice(price: number): number {
   return Math.ceil((price * 1.5) / 100) * 100;
 }
 
-function getTagline(name: string): string {
-  for (const [key, tagline] of Object.entries(TAGLINES)) {
-    if (name.includes(key)) return tagline;
-  }
-  return "酒店级睡眠品质，源头工厂直供";
-}
-
 export default function ProductDetailClient({ product }: Props) {
   const { addItem, openDrawer } = useCart();
   const t = useTranslations("products");
-  const [activeTab, setActiveTab] = useState<Tab>("材质结构");
+  const td = useTranslations("productDetail");
+  const tc = useTranslations("cart");
+
+  const TAB_KEYS = [
+    { key: "tabMaterial", content: "tabMaterialContent" },
+    { key: "tabFeel", content: "tabFeelContent" },
+    { key: "tabTech", content: "tabTechContent" },
+  ] as const;
+
+  type TabKey = typeof TAB_KEYS[number]["key"];
+
+  const [activeTab, setActiveTab] = useState<TabKey>("tabMaterial");
   const [qty, setQty] = useState(1);
   const [loading, setLoading] = useState(false);
   const [buyError, setBuyError] = useState("");
@@ -84,7 +61,22 @@ export default function ProductDetailClient({ product }: Props) {
   const originalPrice = computeOriginalPrice(product.price);
   const savings = originalPrice - product.price;
   const isLowStock = product.stock > 0 && product.stock <= 15;
+
+  function getTagline(name: string): string {
+    if (name.includes("R-666")) return td("taglines.R666");
+    if (name.includes("R-888")) return td("taglines.R888");
+    if (name.includes("R-999")) return td("taglines.R999");
+    return td("taglines.default");
+  }
+
   const tagline = getTagline(product.name);
+
+  const KEY_BENEFITS = [
+    td("benefits.hotel"),
+    td("benefits.latex"),
+    td("benefits.spring"),
+    td("benefits.cert"),
+  ];
 
   function getImageSrc(src: string) {
     return imgErrors[src] ? PLACEHOLDER_SRC : src;
@@ -119,7 +111,7 @@ export default function ProductDetailClient({ product }: Props) {
       });
       window.location.href = data.url;
     } catch {
-      setBuyError("下单失败，请稍后重试");
+      setBuyError(tc("errorMsg"));
       setLoading(false);
     }
   }
@@ -162,18 +154,18 @@ export default function ProductDetailClient({ product }: Props) {
 
               {/* ── Competitor price anchor ── */}
               <div className="bg-[#F8F8F6] border border-[#E2DDD6] px-4 py-4 space-y-1.5 text-xs">
-                <p className="text-[10px] tracking-[0.2em] text-[#6B6B6B] mb-2">MARKET COMPARISON</p>
+                <p className="text-[10px] tracking-[0.2em] text-[#6B6B6B] mb-2">{td("comparisonTitle")}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-[#6B6B6B]">同类酒店床垫市场价</span>
+                  <span className="text-[#6B6B6B]">{td("comparisonMarket")}</span>
                   <span className="text-[#6B6B6B] line-through">¥8,000 – ¥12,000</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-[#6B6B6B]">进口品牌均价</span>
+                  <span className="text-[#6B6B6B]">{td("comparisonImport")}</span>
                   <span className="text-[#6B6B6B] line-through">¥10,000+</span>
                 </div>
                 <div className="h-px bg-[#E2DDD6] my-2" />
                 <div className="flex items-center justify-between">
-                  <span className="font-medium text-[#111111]">本款直供价</span>
+                  <span className="font-medium text-[#111111]">{td("comparisonDirect")}</span>
                   <span className="font-display text-xl text-[#C6A86B]">
                     ¥{product.price.toFixed(0)}
                   </span>
@@ -186,9 +178,9 @@ export default function ProductDetailClient({ product }: Props) {
               {/* ── Savings badge ── */}
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-xs bg-green-50 text-green-700 border border-green-200 px-2.5 py-1">
-                  已省 ¥{savings.toFixed(0)}
+                  {td("savedAmount", { amount: savings.toFixed(0) })}
                 </span>
-                <span className="text-xs text-[#6B6B6B]">相比市场价节省约</span>
+                <span className="text-xs text-[#6B6B6B]">{td("savedVsMarket")}</span>
                 <span className="text-xs font-semibold text-[#111111]">
                   {Math.round(((originalPrice - product.price) / originalPrice) * 100)}%
                 </span>
@@ -262,7 +254,7 @@ export default function ProductDetailClient({ product }: Props) {
                     disabled={loading}
                     className="w-full py-3.5 border border-[#C6A86B] text-[#C6A86B] text-sm tracking-[0.2em] font-medium hover:bg-[#C6A86B] hover:text-white active:scale-[0.99] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {loading ? "正在跳转到支付页面..." : t("buyNow")}
+                    {loading ? t("redirecting") : t("buyNow")}
                   </button>
                 )}
 
@@ -317,7 +309,7 @@ export default function ProductDetailClient({ product }: Props) {
                 </span>
                 {isLowStock && (
                   <span className="absolute top-4 right-4 bg-[#111111] text-white text-[10px] tracking-widest px-3 py-1.5 z-10">
-                    库存紧张
+                    {t("lowStockBadge")}
                   </span>
                 )}
                 {gallery.length > 1 && (
@@ -347,7 +339,7 @@ export default function ProductDetailClient({ product }: Props) {
                   </span>
                   {isLowStock && (
                     <span className="absolute top-4 right-4 bg-[#111111] text-white text-[10px] tracking-widest px-3 py-1.5 z-10">
-                      库存紧张
+                      {t("lowStockBadge")}
                     </span>
                   )}
                 </div>
@@ -362,7 +354,7 @@ export default function ProductDetailClient({ product }: Props) {
                             ? "border-[#C6A86B]"
                             : "border-transparent hover:border-[#C6A86B]/50"
                         }`}
-                        aria-label={`查看第${idx + 1}张图`}
+                        aria-label={`${idx + 1}`}
                       >
                         <Image
                           src={getImageSrc(src)}
@@ -388,7 +380,7 @@ export default function ProductDetailClient({ product }: Props) {
           <span className="font-display text-2xl text-[#C6A86B]">¥{product.price.toFixed(0)}</span>
           <span className="text-xs text-[#6B6B6B] line-through">¥{originalPrice.toFixed(0)}</span>
           <span className="text-xs bg-green-50 text-green-700 border border-green-200 px-2 py-0.5 ml-1">
-            省¥{savings.toFixed(0)}
+            {td("savedAmount", { amount: savings.toFixed(0) })}
           </span>
         </div>
         <div className="flex gap-2">
@@ -405,7 +397,7 @@ export default function ProductDetailClient({ product }: Props) {
               disabled={loading}
               className="flex-1 min-h-[48px] border border-[#C6A86B] text-[#C6A86B] text-xs tracking-widest font-medium hover:bg-[#C6A86B] hover:text-white active:scale-[0.99] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? "跳转支付..." : t("buyNow")}
+              {loading ? t("redirectingShort") : t("buyNow")}
             </button>
           )}
         </div>
@@ -418,23 +410,23 @@ export default function ProductDetailClient({ product }: Props) {
       <div className="bg-white border-t border-[#E2DDD6]">
         <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10">
           <div className="flex border-b border-[#E2DDD6] overflow-x-auto">
-            {TAB_LABELS.map((tab) => (
+            {TAB_KEYS.map((tab) => (
               <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
+                key={tab.key}
+                onClick={() => setActiveTab(tab.key)}
                 className={`flex-shrink-0 px-4 sm:px-6 py-4 text-xs tracking-widest transition-colors border-b-2 -mb-px ${
-                  activeTab === tab
+                  activeTab === tab.key
                     ? "border-[#C6A86B] text-[#111111]"
                     : "border-transparent text-[#6B6B6B] hover:text-[#111111]"
                 }`}
               >
-                {tab}
+                {td(tab.key)}
               </button>
             ))}
           </div>
           <div className="py-8 sm:py-10">
             <p className="text-sm text-[#6B6B6B] leading-loose max-w-2xl">
-              {tabContent[activeTab]}
+              {td(TAB_KEYS.find((t) => t.key === activeTab)?.content ?? "tabMaterialContent")}
             </p>
           </div>
         </div>
@@ -466,16 +458,16 @@ export default function ProductDetailClient({ product }: Props) {
         <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10">
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-xs tracking-[0.3em] text-[#C6A86B] mb-4">
-              UPGRADE YOUR SLEEP TONIGHT
+              {t("finalCtaEyebrow")}
             </p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white mb-4 leading-tight">
-              现在升级你的睡眠质量
+              {t("finalCtaTitle")}
             </h2>
             <p className="text-sm text-white/50 mb-3 leading-relaxed">
-              酒店级体验，从今晚开始
+              {t("finalCtaSub")}
             </p>
             <p className="text-sm text-white/40 mb-8 tracking-wide">
-              ISO认证品质 · 5年品质质保 · 30天无忧试睡 · 全国包邮安装
+              {t("finalCtaTrust")}
             </p>
 
             {/* Price reminder */}
@@ -483,7 +475,7 @@ export default function ProductDetailClient({ product }: Props) {
               <span className="text-sm text-white/40 line-through">¥{originalPrice.toFixed(0)}</span>
               <span className="font-display text-4xl text-[#C6A86B]">¥{product.price.toFixed(0)}</span>
               <span className="text-xs text-green-400 border border-green-400/30 px-2 py-0.5">
-                省¥{savings.toFixed(0)}
+                {td("savedAmount", { amount: savings.toFixed(0) })}
               </span>
             </div>
 
@@ -493,14 +485,14 @@ export default function ProductDetailClient({ product }: Props) {
                 disabled={loading || product.stock === 0}
                 className="w-full sm:w-auto min-h-[52px] px-12 py-3.5 bg-[#C6A86B] text-white text-sm tracking-[0.2em] font-medium hover:bg-white hover:text-[#111111] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {loading ? "正在跳转..." : product.stock === 0 ? "已售罄" : "立即购买"}
+                {loading ? t("redirectingFinal") : product.stock === 0 ? t("soldOutShort") : t("buyNow")}
               </button>
               <button
                 onClick={() => { trackCTAClick("add_to_cart_final_cta", product.id); handleAdd(); }}
                 disabled={product.stock === 0 || loading}
                 className="w-full sm:w-auto min-h-[52px] px-12 py-3.5 border border-white/30 text-white/70 text-sm tracking-[0.2em] hover:border-white hover:text-white transition-colors duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
               >
-                {product.stock === 0 ? "已售罄" : "加入购物车"}
+                {product.stock === 0 ? t("soldOutShort") : t("addToCart")}
               </button>
             </div>
 
