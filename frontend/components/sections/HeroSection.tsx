@@ -30,7 +30,7 @@ export default function HeroSection() {
           {t("eyebrow")}
         </p>
 
-        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight mb-5 sm:mb-6 animate-fade-in-up">
+        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight mb-5 sm:mb-6 animate-fade-in-up whitespace-pre-line">
           {t("title")}
         </h1>
 
