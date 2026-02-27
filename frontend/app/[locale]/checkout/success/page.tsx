@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { fetchSessionStatus } from "@/lib/api";
@@ -23,7 +23,7 @@ interface OrderDetail {
   }[];
 }
 
-export default function CheckoutSuccessPage() {
+function CheckoutSuccessContent() {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get("session_id");
   const t = useTranslations("orders");
@@ -169,5 +169,17 @@ export default function CheckoutSuccessPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function CheckoutSuccessPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-[#F8F8F6]">
+        <div className="w-6 h-6 border border-[#C6A86B] border-t-transparent rounded-full animate-spin" />
+      </div>
+    }>
+      <CheckoutSuccessContent />
+    </Suspense>
   );
 }

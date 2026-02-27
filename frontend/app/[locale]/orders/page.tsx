@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { fetchOrder } from "@/lib/api";
@@ -22,7 +22,7 @@ interface OrderDetail {
   }[];
 }
 
-export default function OrdersPage() {
+function OrdersContent() {
   const searchParams = useSearchParams();
   const orderId = searchParams.get("orderId");
   const t = useTranslations("orders");
@@ -151,5 +151,17 @@ export default function OrdersPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function OrdersPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-[#F8F8F6]">
+        <div className="w-6 h-6 border border-[#C6A86B] border-t-transparent rounded-full animate-spin" />
+      </div>
+    }>
+      <OrdersContent />
+    </Suspense>
   );
 }
