@@ -1,0 +1,217 @@
+{
+  "nav": {
+    "products": "产品系列",
+    "brand": "品牌故事",
+    "cart": "购物袋",
+    "menu": "菜单"
+  },
+  "hero": {
+    "eyebrow": "皇室百兰 · ROYAL BALAND",
+    "title": "五星级酒店同款睡眠体验",
+    "subtitle": "酒店床垫工程专家 · 国宾馆及五星级酒店指定供应商",
+    "cta": "探索产品",
+    "brandCta": "品牌故事"
+  },
+  "trust": {
+    "eyebrow": "CERTIFICATION",
+    "title": "权威认证品质保障",
+    "subtitle": "每一张床垫均通过严格的认证体系与专业检测，以工业级标准守护您的睡眠品质",
+    "iso9001Name": "质量管理体系认证",
+    "iso9001Desc": "通过GB/T19001-2016 idt ISO9001:2015标准认证，弹簧床垫生产与销售全流程品控",
+    "iso14001Name": "环境管理体系认证",
+    "iso14001Desc": "通过ISO14001:2015环境管理体系认证，坚持绿色制造与可持续发展",
+    "cpedName": "中国著名品牌",
+    "cpedDesc": "经中国企业发展促进委员会评选，皇室百兰入选为中国著名品牌",
+    "fireName": "防火阻燃检测",
+    "fireDesc": "产品通过专业防火阻燃检测，面料采用进口阻燃纯棉布，安全性能达到行业高标准"
+  },
+  "hotels": {
+    "eyebrow": "HOTEL PARTNERS",
+    "title": "服务众多高端酒店",
+    "subtitle": "皇室百兰已成为众多五星级酒店及国宾馆的指定寝具供应商",
+    "rooms": "家门店",
+    "coverage": "合作酒店遍布全国多个省市 · 产品远销港澳台地区"
+  },
+  "products": {
+    "eyebrow": "FLAGSHIP PRODUCTS",
+    "title": "旗舰产品系列",
+    "viewAll": "查看全部产品 →",
+    "hotelBadge": "酒店同款",
+    "hotLabel": "热销首选",
+    "flagshipLabel": "旗舰款",
+    "addToBag": "加入购物袋",
+    "buyNow": "立即购买",
+    "soldOut": "暂时售罄",
+    "qty": "数量",
+    "inStock": "现货充足，可立即发货",
+    "lowStock": "仅剩 {count} 件 · 热销中",
+    "perUnit": "/ 张（含配送安装）",
+    "hotelPrice": "酒店采购价",
+    "directPrice": "直购价",
+    "savings": "已优惠",
+    "urgency": "限时优惠：今日下单立减",
+    "urgencyNote": "仅限本周",
+    "backToBrand": "了解更多品牌故事 →",
+    "discoverMore": "探索更多产品",
+    "viewAll2": "查看全部系列",
+    "collection": "产品系列",
+    "collectionDesc": "每一款产品都经过严格的工艺验证，为您提供五星级酒店同款的睡眠体验",
+    "total": "共 {count} 款产品"
+  },
+  "cart": {
+    "title": "购物袋",
+    "empty": "购物袋是空的",
+    "emptySubtitle": "选择一款适合你的睡眠方案",
+    "browse": "浏览产品",
+    "items": "{count} 件商品",
+    "total": "合计",
+    "checkout": "立即下单",
+    "processing": "提交中...",
+    "trustLine": "ISO认证品质 · 品质质保 · 全国配送",
+    "urgency": "今日下单享立减 ¥300 优惠",
+    "errorMsg": "下单失败，请稍后重试"
+  },
+  "tech": {
+    "eyebrow": "TECHNOLOGY",
+    "title": "核心睡眠科技",
+    "subtitle": "联合7国国际顶级供应商，为您打造真正有益于身体健康的睡眠环境",
+    "spineTitle": "独立袋装弹簧系统",
+    "spineDesc": "采用美国礼恩派（Leggett & Platt）弹簧技术，独立筒袋装设计精准对应人体压力分区，高碳钢丝经250-280°C高温热处理",
+    "breathTitle": "进口阻燃面料",
+    "breathDesc": "面料选用美国杜邦特立珑（DuPont Teflon）纺织工艺，搭配比利时贝卡特（Bekaert）高端布料，通过防火阻燃检测认证",
+    "antimicTitle": "抗菌防螨处理",
+    "antimicDesc": "采用韩国颐康生化科技（YiKang）专业抗菌防螨剂，有效阻断尘螨滋生，面料经进口抗菌阻燃纯棉布处理",
+    "latexTitle": "比利时天然乳胶",
+    "latexDesc": "精选比利时天然乳胶制造商原产乳胶，搭配百兰专利双盈舒适树脂棉与高弹性七孔纤维棉，弹性持久耐用"
+  },
+  "social": {
+    "eyebrow": "OUR FOOTPRINT",
+    "title": "数字见证品质",
+    "hotelCount": "30+",
+    "hotelLabel": "合作高端酒店",
+    "hotelSub": "含国宾馆及五星级酒店",
+    "yearsCount": "8000㎡",
+    "yearsLabel": "生产基地面积",
+    "yearsSub": "深圳总部+惠州工厂",
+    "reviewCount": "7国",
+    "reviewLabel": "国际供应链伙伴",
+    "reviewSub": "美国·德国·比利时·韩国",
+    "exportCount": "ISO²",
+    "exportLabel": "双体系认证",
+    "exportSub": "ISO9001 + ISO14001"
+  },
+  "cta": {
+    "eyebrow": "BEGIN YOUR JOURNEY",
+    "title": "选择你的\n专属睡眠",
+    "subtitle": "每个人的身体曲线不同，每个人的睡眠需求不同。皇室百兰提供专业睡眠顾问服务，帮你找到最适合的睡眠方案。",
+    "browseProducts": "浏览产品系列",
+    "learnBrand": "了解品牌故事"
+  },
+  "reviews": {
+    "eyebrow": "CUSTOMER REVIEWS",
+    "title": "真实用户好评",
+    "subtitle": "来自全国各地真实购买用户的睡眠改善故事",
+    "verified": "已核验",
+    "rating": "综合评分",
+    "totalReviews": "累计好评",
+    "satisfaction": "好评率"
+  },
+  "orders": {
+    "title": "订单已确认",
+    "eyebrow": "ORDER CONFIRMED",
+    "orderNo": "订单号",
+    "details": "订单详情",
+    "pending": "待处理",
+    "total": "合计",
+    "orderAt": "下单时间",
+    "confirmMsg": "您的订单已成功提交",
+    "confirmSubMsg": "我们将在 {hours} 小时内联系您确认发货安排，请保持手机畅通",
+    "tracking": "全程物流追踪，实时掌握配送状态",
+    "installation": "专业安装团队上门服务，含旧床垫清运",
+    "trial": "30天无忧试睡，不满意全额退款",
+    "continueShopping": "继续选购",
+    "loading": "加载中...",
+    "notFound": "订单不存在",
+    "loadFailed": "订单加载失败",
+    "backHome": "返回首页"
+  },
+  "brand": {
+    "eyebrow": "ABOUT US",
+    "title": "酒店床垫\n工程专家"
+  },
+  "footer": {
+    "tagline": "专业酒店床垫工程项目供应商，集研发、生产、销售高品质床垫为一体，服务众多五星级酒店及国宾馆。",
+    "productsTitle": "产品",
+    "aboutTitle": "关于",
+    "product1": "云感乳胶弹簧床垫",
+    "product2": "酒店专供硬感床垫（R-888）",
+    "product3": "豪华旗舰乳胶床垫（R-999）",
+    "about1": "品牌故事",
+    "about2": "资质认证",
+    "about3": "工程案例",
+    "copyright": "© 2024 皇室百兰 Royal Baland · ISO9001 · ISO14001 认证企业"
+  },
+  "meta": {
+    "homeTitle": "皇室百兰 | 酒店床垫工程专家",
+    "homeDesc": "五星级酒店同款睡眠体验，皇室百兰（Royal Baland）专业酒店床垫工程项目供应商，服务众多五星级酒店及国宾馆。",
+    "productsTitle": "产品系列 | 皇室百兰",
+    "productsDesc": "皇室百兰全系列高端床垫，五星级酒店同款，ISO国际认证品质保障。",
+    "brandTitle": "品牌故事 | 皇室百兰",
+    "brandDesc": "惠州市皇室百兰寝具有限公司，专业酒店床垫工程项目供应商，ISO9001及ISO14001双认证企业。",
+    "productTitle": "{name} | 皇室百兰",
+    "productDesc": "{name}，皇室百兰高端床垫，五星级酒店同款品质，ISO认证制造。"
+  },
+  "trustBar": {
+    "returns": "7天无理由退换",
+    "returnsSub": "无忧购物",
+    "shipping": "全国包邮",
+    "shippingSub": "上门安装",
+    "warranty": "品质质保",
+    "warrantySub": "售后无忧",
+    "hotel": "酒店同款品质",
+    "hotelSub": "ISO认证"
+  },
+  "lead": {
+    "title": "领取专属优惠",
+    "subtitle": "留下联系方式，立享 ¥300 睡眠优惠券",
+    "placeholder": "手机号或邮箱",
+    "submit": "立即领取",
+    "submitting": "提交中...",
+    "success": "优惠券已发送，我们会尽快联系您",
+    "close": "暂不需要",
+    "badge": "限量发放，先到先得"
+  },
+  "admin": {
+    "title": "数据看板",
+    "totalVisits": "总访问量",
+    "productViews": "商品浏览",
+    "orders": "订单数",
+    "revenue": "总营收",
+    "funnelTitle": "转化漏斗",
+    "leadsTitle": "线索列表",
+    "contact": "联系方式",
+    "source": "来源",
+    "locale": "语言",
+    "time": "时间"
+  },
+  "productDetail": {
+    "taglines": {
+      "R666": "轻柔包裹，回弹迅速，乳胶弹簧双重呵护",
+      "R888": "酒店同款硬感，脊椎精准承托",
+      "R999": "旗舰乳胶，顶级睡眠体验"
+    },
+    "benefits": {
+      "hotel": "五星酒店同款供货",
+      "latex": "比利时进口天然乳胶",
+      "spring": "美国礼恩派独立袋装弹簧",
+      "cert": "ISO9001 + ISO14001 双认证"
+    }
+  },
+  "productCta": {
+    "eyebrow": "READY TO SLEEP BETTER",
+    "title": "开始你的高品质睡眠",
+    "subtitle": "ISO认证品质 · 5年品质质保 · 全国包邮安装",
+    "cta": "立即选购",
+    "secondary": "了解品牌故事"
+  }
+}

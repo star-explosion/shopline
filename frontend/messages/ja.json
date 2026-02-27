@@ -1,0 +1,217 @@
+{
+  "nav": {
+    "products": "製品ライン",
+    "brand": "ブランドストーリー",
+    "cart": "バッグ",
+    "menu": "メニュー"
+  },
+  "hero": {
+    "eyebrow": "ロイヤルバランド · ROYAL BALAND",
+    "title": "5つ星ホテルと同じ睡眠体験",
+    "subtitle": "ホテルマットレスエンジニアリングの専門家 · 国賓館および5つ星ホテル指定サプライヤー",
+    "cta": "製品を見る",
+    "brandCta": "ブランドストーリー"
+  },
+  "trust": {
+    "eyebrow": "CERTIFICATION",
+    "title": "認証品質保証",
+    "subtitle": "すべてのマットレスは厳格な認証と専門検査を通過し、工業グレードの基準で睡眠品質を守ります",
+    "iso9001Name": "品質マネジメントシステム認証",
+    "iso9001Desc": "GB/T19001-2016 idt ISO9001:2015認証取得 — スプリングマットレスの生産・販売全工程の品質管理",
+    "iso14001Name": "環境マネジメントシステム認証",
+    "iso14001Desc": "ISO 14001:2015認証 — グリーン製造と持続可能な発展",
+    "cpedName": "中国著名ブランド",
+    "cpedDesc": "中国企業発展促進委員会により中国著名ブランドに選出",
+    "fireName": "防火難燃検査",
+    "fireDesc": "専門の防火難燃検査に合格、輸入難燃綿布を使用し高い安全基準を達成"
+  },
+  "hotels": {
+    "eyebrow": "HOTEL PARTNERS",
+    "title": "多くの高級ホテルに信頼される",
+    "subtitle": "ロイヤルバランドは多数の5つ星ホテルおよび国賓館の指定寝具サプライヤーです",
+    "rooms": "軒",
+    "coverage": "全国多数の省市のホテルと提携 · 香港・マカオ・台湾にも輸出"
+  },
+  "products": {
+    "eyebrow": "FLAGSHIP PRODUCTS",
+    "title": "フラッグシップコレクション",
+    "viewAll": "全製品を見る →",
+    "hotelBadge": "ホテル仕様",
+    "hotLabel": "ベストセラー",
+    "flagshipLabel": "フラッグシップ",
+    "addToBag": "バッグに追加",
+    "buyNow": "今すぐ購入",
+    "soldOut": "売り切れ",
+    "qty": "数量",
+    "inStock": "在庫あり — 即日発送可能",
+    "lowStock": "残り{count}点 · 人気商品",
+    "perUnit": "/ 枚（配送・設置込み）",
+    "hotelPrice": "ホテル仕入れ価格",
+    "directPrice": "直販価格",
+    "savings": "お得額",
+    "urgency": "期間限定：今日注文で",
+    "urgencyNote": "今週限り",
+    "backToBrand": "ブランドについて詳しく →",
+    "discoverMore": "さらに探す",
+    "viewAll2": "全コレクションを見る",
+    "collection": "製品ライン",
+    "collectionDesc": "すべての製品は厳格な品質検証を経て、5つ星ホテルと同等の睡眠体験を提供します",
+    "total": "{count}製品"
+  },
+  "cart": {
+    "title": "ショッピングバッグ",
+    "empty": "バッグは空です",
+    "emptySubtitle": "あなたに合った睡眠ソリューションを見つけましょう",
+    "browse": "製品を見る",
+    "items": "{count}点",
+    "total": "合計",
+    "checkout": "注文する",
+    "processing": "処理中...",
+    "trustLine": "ISO認証品質 · 品質保証 · 送料無料",
+    "urgency": "今日注文で¥300割引",
+    "errorMsg": "注文に失敗しました。もう一度お試しください。"
+  },
+  "tech": {
+    "eyebrow": "TECHNOLOGY",
+    "title": "コア睡眠テクノロジー",
+    "subtitle": "7ヶ国の世界トップクラスのサプライヤーと提携し、健康に真に有益な睡眠環境を提供します",
+    "spineTitle": "ポケットスプリングシステム",
+    "spineDesc": "Leggett & Platt（米国）のスプリング技術を採用、独立ポケットコイル設計、250〜280°Cの高温熱処理を施した高炭素鋼線",
+    "breathTitle": "輸入難燃生地",
+    "breathDesc": "DuPont Teflon（米国）織物技術とBekaert（ベルギー）の高級生地を組み合わせ、防火難燃認証取得",
+    "antimicTitle": "抗菌・防ダニ処理",
+    "antimicDesc": "YiKang（韓国）の専門的な抗菌防ダニ剤を使用、輸入抗菌難燃純綿布で処理",
+    "latexTitle": "ベルギー産天然ラテックス",
+    "latexDesc": "ベルギー産天然ラテックスを厳選、バランド特許の快適レジンコットンと高弾性七孔繊維コットンを使用"
+  },
+  "social": {
+    "eyebrow": "OUR FOOTPRINT",
+    "title": "数字が品質を証明する",
+    "hotelCount": "30以上",
+    "hotelLabel": "提携ホテル",
+    "hotelSub": "国賓館・5つ星ホテルを含む",
+    "yearsCount": "8,000㎡",
+    "yearsLabel": "生産施設",
+    "yearsSub": "深セン本社+恵州工場",
+    "reviewCount": "7ヶ国",
+    "reviewLabel": "国際サプライチェーン",
+    "reviewSub": "米国・ドイツ・ベルギー・韓国",
+    "exportCount": "ISO²",
+    "exportLabel": "デュアル認証",
+    "exportSub": "ISO9001 + ISO14001"
+  },
+  "cta": {
+    "eyebrow": "BEGIN YOUR JOURNEY",
+    "title": "あなたのための\n最高の眠りを",
+    "subtitle": "一人一人の体の曲線と睡眠ニーズは異なります。ロイヤルバランドの専門的な睡眠コンサルタントが最適なソリューションを見つけます。",
+    "browseProducts": "製品を見る",
+    "learnBrand": "ブランドストーリー"
+  },
+  "reviews": {
+    "eyebrow": "CUSTOMER REVIEWS",
+    "title": "お客様の声",
+    "subtitle": "全国各地の実際の購入者による睡眠改善ストーリー",
+    "verified": "認証済み",
+    "rating": "総合評価",
+    "totalReviews": "総レビュー数",
+    "satisfaction": "満足度"
+  },
+  "orders": {
+    "title": "注文確認",
+    "eyebrow": "ORDER CONFIRMED",
+    "orderNo": "注文番号",
+    "details": "注文詳細",
+    "pending": "処理中",
+    "total": "合計",
+    "orderAt": "注文日時",
+    "confirmMsg": "ご注文が正常に送信されました",
+    "confirmSubMsg": "{hours}時間以内にご連絡いたします",
+    "tracking": "配送状況をリアルタイムで追跡",
+    "installation": "専門チームによる設置サービス（古いマットレスの引き取りを含む）",
+    "trial": "30日間の試用保証 — ご満足いただけない場合は全額返金",
+    "continueShopping": "ショッピングを続ける",
+    "loading": "読み込み中...",
+    "notFound": "注文が見つかりません",
+    "loadFailed": "注文の読み込みに失敗しました",
+    "backHome": "ホームに戻る"
+  },
+  "brand": {
+    "eyebrow": "ABOUT US",
+    "title": "ホテルマットレス\nエンジニアリングの専門家"
+  },
+  "footer": {
+    "tagline": "プロフェッショナルなホテルマットレスエンジニアリングサプライヤー。5つ星ホテルおよび国賓館に信頼される高品質マットレスの研究開発・製造・販売。",
+    "productsTitle": "製品",
+    "aboutTitle": "について",
+    "product1": "クラウドラテックススプリングマットレス",
+    "product2": "ホテル用ハードマットレス（R-888）",
+    "product3": "ラグジュアリーフラッグシップマットレス（R-999）",
+    "about1": "ブランドストーリー",
+    "about2": "認証",
+    "about3": "プロジェクト事例",
+    "copyright": "© 2024 ロイヤルバランド · ISO9001 · ISO14001 認証企業"
+  },
+  "meta": {
+    "homeTitle": "ロイヤルバランド | ホテルマットレスエンジニアリングの専門家",
+    "homeDesc": "5つ星ホテルと同じ睡眠体験。ロイヤルバランドは国賓館および5つ星ホテルに信頼されるプロフェッショナルなホテルマットレスサプライヤーです。",
+    "productsTitle": "製品ライン | ロイヤルバランド",
+    "productsDesc": "ロイヤルバランドの高級マットレス全ライン — ホテルグレードの品質とISO国際認証。",
+    "brandTitle": "ブランドストーリー | ロイヤルバランド",
+    "brandDesc": "恵州市皇室百蘭寝具有限公司。プロフェッショナルなホテルマットレスサプライヤー。ISO9001・ISO14001デュアル認証。",
+    "productTitle": "{name} | ロイヤルバランド",
+    "productDesc": "{name} — ロイヤルバランド高級マットレス、ホテルグレード品質、ISO認証製造。"
+  },
+  "trustBar": {
+    "returns": "7日間返品保証",
+    "returnsSub": "安心ショッピング",
+    "shipping": "全国送料無料",
+    "shippingSub": "設置込み",
+    "warranty": "品質保証",
+    "warrantySub": "アフターサービス",
+    "hotel": "ホテルグレード品質",
+    "hotelSub": "ISO認証"
+  },
+  "lead": {
+    "title": "限定特典を受け取る",
+    "subtitle": "連絡先を教えていただくと¥300クーポンをプレゼント",
+    "placeholder": "電話番号またはメールアドレス",
+    "submit": "今すぐ受け取る",
+    "submitting": "送信中...",
+    "success": "クーポンを送りました！近日中にご連絡いたします。",
+    "close": "今は不要",
+    "badge": "数量限定 — 先着順"
+  },
+  "admin": {
+    "title": "分析ダッシュボード",
+    "totalVisits": "総訪問数",
+    "productViews": "商品閲覧",
+    "orders": "注文数",
+    "revenue": "売上",
+    "funnelTitle": "コンバージョンファネル",
+    "leadsTitle": "リード一覧",
+    "contact": "連絡先",
+    "source": "ソース",
+    "locale": "言語",
+    "time": "時間"
+  },
+  "productDetail": {
+    "taglines": {
+      "R666": "柔らかな包み込み、素早い反発—ラテックスとスプリングの融合",
+      "R888": "ホテル仕様のかため—脊椎を精密にサポート",
+      "R999": "フラッグシップラテックス—最高の睡眠体験"
+    },
+    "benefits": {
+      "hotel": "5つ星ホテルと同じ供給元",
+      "latex": "ベルギー産天然ラテックス使用",
+      "spring": "L&P社製ポケットコイルスプリング",
+      "cert": "ISO9001 + ISO14001 デュアル認証"
+    }
+  },
+  "productCta": {
+    "eyebrow": "READY TO SLEEP BETTER",
+    "title": "上質な眠りを始めよう",
+    "subtitle": "ISO認証 · 5年品質保証 · 全国送料無料",
+    "cta": "今すぐ購入",
+    "secondary": "ブランドストーリー"
+  }
+}

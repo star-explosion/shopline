@@ -1,0 +1,217 @@
+{
+  "nav": {
+    "products": "Products",
+    "brand": "Our Story",
+    "cart": "Bag",
+    "menu": "Menu"
+  },
+  "hero": {
+    "eyebrow": "Royal Baland · ROYAL BALAND",
+    "title": "Five-Star Hotel Sleep Experience",
+    "subtitle": "Hotel Mattress Engineering Experts · Trusted by State Guest Houses & Five-Star Hotels",
+    "cta": "Explore Products",
+    "brandCta": "Our Story"
+  },
+  "trust": {
+    "eyebrow": "CERTIFICATION",
+    "title": "Certified Quality Assurance",
+    "subtitle": "Every mattress passes rigorous certification and professional testing to safeguard your sleep with industrial-grade standards",
+    "iso9001Name": "Quality Management System",
+    "iso9001Desc": "Certified to GB/T19001-2016 idt ISO9001:2015 — full quality control for spring mattress production and sales",
+    "iso14001Name": "Environmental Management System",
+    "iso14001Desc": "ISO 14001:2015 certified — green manufacturing and sustainable development",
+    "cpedName": "China Famous Brand",
+    "cpedDesc": "Selected as a China Famous Brand by the China Enterprise Development Promotion Committee",
+    "fireName": "Fire Retardant Testing",
+    "fireDesc": "Products pass professional fire retardant testing, using imported flame-retardant cotton fabric"
+  },
+  "hotels": {
+    "eyebrow": "HOTEL PARTNERS",
+    "title": "Trusted by Premium Hotels",
+    "subtitle": "Royal Baland is the designated bedding supplier for numerous five-star hotels and state guest houses",
+    "rooms": "properties",
+    "coverage": "Hotel partners across multiple provinces · Products exported to Hong Kong, Macau & Taiwan"
+  },
+  "products": {
+    "eyebrow": "FLAGSHIP PRODUCTS",
+    "title": "Flagship Collection",
+    "viewAll": "View All Products →",
+    "hotelBadge": "Hotel Grade",
+    "hotLabel": "Best Seller",
+    "flagshipLabel": "Flagship",
+    "addToBag": "Add to Bag",
+    "buyNow": "Buy Now",
+    "soldOut": "Sold Out",
+    "qty": "Qty",
+    "inStock": "In stock — ships immediately",
+    "lowStock": "Only {count} left · Selling fast",
+    "perUnit": "/ mattress (incl. delivery & installation)",
+    "hotelPrice": "Hotel Price",
+    "directPrice": "Direct Price",
+    "savings": "You save",
+    "urgency": "Limited offer: Save",
+    "urgencyNote": "This week only",
+    "backToBrand": "Learn about our brand →",
+    "discoverMore": "Discover More",
+    "viewAll2": "View Full Collection",
+    "collection": "Products",
+    "collectionDesc": "Every product is rigorously validated to deliver the sleep experience of a five-star hotel",
+    "total": "{count} products"
+  },
+  "cart": {
+    "title": "Shopping Bag",
+    "empty": "Your bag is empty",
+    "emptySubtitle": "Find the sleep solution that's right for you",
+    "browse": "Browse Products",
+    "items": "{count} items",
+    "total": "Total",
+    "checkout": "Place Order",
+    "processing": "Processing...",
+    "trustLine": "ISO Certified · Quality Warranty · Free Shipping",
+    "urgency": "Order today — save ¥300",
+    "errorMsg": "Order failed. Please try again."
+  },
+  "tech": {
+    "eyebrow": "TECHNOLOGY",
+    "title": "Core Sleep Technology",
+    "subtitle": "Partnering with world-class suppliers from 7 countries to create a sleep environment genuinely beneficial to your health",
+    "spineTitle": "Pocket Spring System",
+    "spineDesc": "Featuring Leggett & Platt (USA) spring technology with independent pocket design, high-carbon steel wire heat-treated at 250–280°C",
+    "breathTitle": "Imported Flame-Retardant Fabric",
+    "breathDesc": "DuPont Teflon (USA) textile technology paired with Bekaert (Belgium) premium fabrics, certified fire-retardant",
+    "antimicTitle": "Antibacterial & Anti-Mite",
+    "antimicDesc": "YiKang (Korea) professional antibacterial and anti-mite treatment, with imported antibacterial flame-retardant cotton fabric",
+    "latexTitle": "Belgian Natural Latex",
+    "latexDesc": "Premium Belgian natural latex, paired with Baland's patented comfort resin cotton and high-elasticity seven-hole fiber cotton"
+  },
+  "social": {
+    "eyebrow": "OUR FOOTPRINT",
+    "title": "Numbers Speak Quality",
+    "hotelCount": "30+",
+    "hotelLabel": "Hotel Partners",
+    "hotelSub": "Incl. State Guest Houses & 5-star hotels",
+    "yearsCount": "8,000㎡",
+    "yearsLabel": "Production Facility",
+    "yearsSub": "Shenzhen HQ + Huizhou Factory",
+    "reviewCount": "7",
+    "reviewLabel": "Countries in Supply Chain",
+    "reviewSub": "USA · Germany · Belgium · Korea",
+    "exportCount": "ISO²",
+    "exportLabel": "Dual Certification",
+    "exportSub": "ISO9001 + ISO14001"
+  },
+  "cta": {
+    "eyebrow": "BEGIN YOUR JOURNEY",
+    "title": "Find Your Perfect\nSleep",
+    "subtitle": "Every body is different. Every sleep need is unique. Royal Baland offers expert sleep consultancy to help you find the ideal solution.",
+    "browseProducts": "Browse Products",
+    "learnBrand": "Our Story"
+  },
+  "reviews": {
+    "eyebrow": "CUSTOMER REVIEWS",
+    "title": "Real Customer Stories",
+    "subtitle": "Sleep improvement stories from verified buyers across the country",
+    "verified": "Verified",
+    "rating": "Overall Rating",
+    "totalReviews": "Total Reviews",
+    "satisfaction": "Satisfaction Rate"
+  },
+  "orders": {
+    "title": "Order Confirmed",
+    "eyebrow": "ORDER CONFIRMED",
+    "orderNo": "Order No.",
+    "details": "Order Details",
+    "pending": "Pending",
+    "total": "Total",
+    "orderAt": "Ordered at",
+    "confirmMsg": "Your order has been successfully submitted",
+    "confirmSubMsg": "We will contact you within {hours} hours to confirm your delivery, please keep your phone available",
+    "tracking": "Full logistics tracking — know your delivery status in real time",
+    "installation": "Professional installation team — including old mattress removal",
+    "trial": "30-day risk-free trial — full refund if unsatisfied",
+    "continueShopping": "Continue Shopping",
+    "loading": "Loading...",
+    "notFound": "Order not found",
+    "loadFailed": "Failed to load order",
+    "backHome": "Back to Home"
+  },
+  "brand": {
+    "eyebrow": "ABOUT US",
+    "title": "Hotel Mattress\nEngineering Experts"
+  },
+  "footer": {
+    "tagline": "Professional hotel mattress engineering supplier. R&D, manufacturing, and sales of premium mattresses, trusted by five-star hotels and state guest houses.",
+    "productsTitle": "Products",
+    "aboutTitle": "About",
+    "product1": "Cloud Latex Spring Mattress",
+    "product2": "Hotel Firm Mattress (R-888)",
+    "product3": "Luxury Flagship Latex Mattress (R-999)",
+    "about1": "Our Story",
+    "about2": "Certifications",
+    "about3": "Project Cases",
+    "copyright": "© 2024 Royal Baland · ISO9001 · ISO14001 Certified"
+  },
+  "meta": {
+    "homeTitle": "Royal Baland | Hotel Mattress Engineering Experts",
+    "homeDesc": "Five-star hotel sleep experience. Royal Baland is a professional hotel mattress engineering supplier, trusted by state guest houses and five-star hotels.",
+    "productsTitle": "Products | Royal Baland",
+    "productsDesc": "Royal Baland's full range of luxury mattresses — hotel-grade quality with ISO international certification.",
+    "brandTitle": "Our Story | Royal Baland",
+    "brandDesc": "Huizhou Royal Baland Bedding Co., Ltd. Professional hotel mattress engineering supplier. ISO9001 and ISO14001 dual-certified.",
+    "productTitle": "{name} | Royal Baland",
+    "productDesc": "{name} — Royal Baland premium mattress, hotel-grade quality, ISO-certified manufacturing."
+  },
+  "trustBar": {
+    "returns": "7-Day Returns",
+    "returnsSub": "Worry-free",
+    "shipping": "Free Shipping",
+    "shippingSub": "Installation included",
+    "warranty": "Quality Warranty",
+    "warrantySub": "After-sales covered",
+    "hotel": "Hotel Grade Quality",
+    "hotelSub": "ISO Certified"
+  },
+  "lead": {
+    "title": "Claim Your Exclusive Offer",
+    "subtitle": "Share your contact — get an instant ¥300 sleep voucher",
+    "placeholder": "Phone or email",
+    "submit": "Claim Now",
+    "submitting": "Submitting...",
+    "success": "Voucher sent! We'll be in touch soon.",
+    "close": "No thanks",
+    "badge": "Limited availability — first come first served"
+  },
+  "admin": {
+    "title": "Analytics Dashboard",
+    "totalVisits": "Total Visits",
+    "productViews": "Product Views",
+    "orders": "Orders",
+    "revenue": "Revenue",
+    "funnelTitle": "Conversion Funnel",
+    "leadsTitle": "Leads",
+    "contact": "Contact",
+    "source": "Source",
+    "locale": "Language",
+    "time": "Time"
+  },
+  "productDetail": {
+    "taglines": {
+      "R666": "Soft support, instant rebound — latex & spring combined",
+      "R888": "Hotel-grade firm support, precise spinal alignment",
+      "R999": "Flagship latex — the ultimate sleep experience"
+    },
+    "benefits": {
+      "hotel": "Same supply as 5-star hotels",
+      "latex": "Belgian natural latex imported",
+      "spring": "Leggett & Platt independent pocket springs",
+      "cert": "ISO9001 + ISO14001 dual certified"
+    }
+  },
+  "productCta": {
+    "eyebrow": "READY TO SLEEP BETTER",
+    "title": "Start Your Premium Sleep",
+    "subtitle": "ISO Certified · 5-Year Warranty · Free Nationwide Delivery",
+    "cta": "Shop Now",
+    "secondary": "Brand Story"
+  }
+}
