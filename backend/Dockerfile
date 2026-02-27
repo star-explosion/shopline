@@ -1,8 +1,12 @@
-FROM node:22-alpine
+FROM node:22-slim
 
 WORKDIR /app
 
 COPY package*.json ./
+
+# Copy prisma schema BEFORE npm install so postinstall (prisma generate) can find it
+COPY prisma ./prisma
+
 RUN npm install
 
 COPY . .
