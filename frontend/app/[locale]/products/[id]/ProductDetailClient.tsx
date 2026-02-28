@@ -60,8 +60,11 @@ export default function ProductDetailClient({ product }: Props) {
   const gallery = product.images?.length > 0 ? product.images : [product.image];
   const [activeImage, setActiveImage] = useState(gallery[0]);
 
-  const originalPrice = computeOriginalPrice(product.price);
-  const savings = originalPrice - product.price;
+  const originalPrice =
+    typeof product.originalPrice === "number" && product.originalPrice > product.price
+      ? product.originalPrice
+      : computeOriginalPrice(product.price);
+  const savings = Math.max(0, originalPrice - product.price);
   const isLowStock = product.stock > 0 && product.stock <= 15;
 
   function inferCode(): "R666" | "R888" | "R999" | null {
@@ -88,6 +91,12 @@ export default function ProductDetailClient({ product }: Props) {
       : locale === "ja"
         ? product.nameJa || product.name
         : product.name;
+  const subtitle =
+    locale === "en"
+      ? product.subtitleEn || product.subtitle || ""
+      : locale === "ja"
+        ? product.subtitleJa || product.subtitle || ""
+        : product.subtitle || "";
   const description =
     locale === "en"
       ? product.descriptionEn || product.description
@@ -171,6 +180,11 @@ export default function ProductDetailClient({ product }: Props) {
                 <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl text-[#111111] leading-snug mb-3">
                   {name}
                 </h1>
+                {subtitle ? (
+                  <p className="text-xs text-[#8A857C] tracking-wide mb-2">
+                    {subtitle}
+                  </p>
+                ) : null}
                 <p className="text-sm text-[#6B6B6B] italic leading-relaxed">
                   {tagline}
                 </p>

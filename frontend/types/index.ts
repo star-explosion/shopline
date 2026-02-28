@@ -4,6 +4,9 @@ export interface Product {
   name: string;
   nameEn?: string;
   nameJa?: string;
+  subtitle?: string;
+  subtitleEn?: string;
+  subtitleJa?: string;
   description: string;
   descriptionEn?: string;
   descriptionJa?: string;

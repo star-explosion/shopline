@@ -17,14 +17,23 @@ function computeOriginalPrice(price: number): number {
 export default function ProductCard({ product }: ProductCardProps) {
   const { addItem, openDrawer } = useCart();
   const locale = useLocale();
-  const originalPrice = computeOriginalPrice(product.price);
-  const savings = originalPrice - product.price;
+  const originalPrice =
+    typeof product.originalPrice === "number" && product.originalPrice > product.price
+      ? product.originalPrice
+      : computeOriginalPrice(product.price);
+  const savings = Math.max(0, originalPrice - product.price);
   const name =
     locale === "en"
       ? product.nameEn || product.name
       : locale === "ja"
         ? product.nameJa || product.name
         : product.name;
+  const subtitle =
+    locale === "en"
+      ? product.subtitleEn || product.subtitle || ""
+      : locale === "ja"
+        ? product.subtitleJa || product.subtitle || ""
+        : product.subtitle || "";
   const description =
     locale === "en"
       ? product.descriptionEn || product.description
@@ -63,6 +72,11 @@ export default function ProductCard({ product }: ProductCardProps) {
             {name}
           </h3>
         </Link>
+        {subtitle ? (
+          <p className="text-[11px] text-[#8A857C] line-clamp-1 tracking-wide">
+            {subtitle}
+          </p>
+        ) : null}
         <p className="text-xs text-[#6B6B6B] line-clamp-2 leading-relaxed">
           {description}
         </p>

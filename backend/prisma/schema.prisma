@@ -21,6 +21,9 @@ model Product {
   name        String
   nameEn      String      @default("")
   nameJa      String      @default("")
+  subtitle    String      @default("")
+  subtitleEn  String      @default("")
+  subtitleJa  String      @default("")
   description String
   descriptionEn String    @default("")
   descriptionJa String    @default("")

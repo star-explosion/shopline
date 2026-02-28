@@ -12,6 +12,9 @@ type ProductSeed = {
   name: string;
   nameEn: string;
   nameJa: string;
+  subtitle: string;
+  subtitleEn: string;
+  subtitleJa: string;
   description: string;
   descriptionEn: string;
   descriptionJa: string;
@@ -37,24 +40,27 @@ async function main() {
   const products: ProductSeed[] = [
     {
       code: "R666",
-      name: "皇室百兰 R666 五星级酒店床垫",
-      nameEn: "Royal Baland R666 Five-Star Hotel Mattress",
-      nameJa: "ロイヤルバランド R666 五つ星ホテルマットレス",
+      name: "皇室百兰 R666 舒享商务床垫",
+      nameEn: "Royal Baland R666 Comfort Business Mattress",
+      nameJa: "ロイヤルバランド R666 コンフォートビジネスマットレス",
+      subtitle: "独立袋装弹簧六环系统 · 1020个精准承托弹簧",
+      subtitleEn: "Pocket spring six-ring system · 1020 precision support springs",
+      subtitleJa: "独立ポケットスプリング六環システム · 1020基の精密サポートスプリング",
       description:
-        "专为高级酒店定制的经济型床垫，采用独立袋装弹簧六环结构，进口抗菌阻燃纯棉面料，1020个独立弹簧提供完美承托。符合国家标准，适合四星级及商务酒店使用。",
+        "专为高级酒店定制的经济型床垫，采用独立袋装弹簧六环结构，进口抗菌阻燃纯棉面料，1020个独立弹簧提供完美承托。符合国家标准GB10564-89和GB4357-89，适合四星级及商务酒店使用。",
       descriptionEn:
-        "Economical hotel mattress featuring independent pocket spring hexagonal structure, imported antibacterial flame-retardant cotton fabric, 1020 independent springs providing perfect support. Meets national standards, suitable for 4-star and business hotels.",
+        "An economical mattress tailored for upscale hotels, featuring an independent pocket spring six-ring structure and imported antibacterial flame-retardant cotton fabric. 1020 independent springs provide precise support. Complies with GB10564-89 and GB4357-89, ideal for four-star and business hotels.",
       descriptionJa:
-        "高級ホテル向け経済型マットレス、独立袋装スプリング六環構造、輸入抗菌難燃純綿生地、1020個の独立スプリングが完璧なサポートを提供。国家基準に適合。",
-      price: 5999,
-      originalPrice: 8999,
+        "高級ホテル向けの経済型マットレス。独立ポケットスプリング六環構造と輸入抗菌難燃純綿生地を採用し、1020個の独立スプリングが精密なサポートを提供。GB10564-89およびGB4357-89に適合し、四つ星・ビジネスホテルに最適。",
+      price: 2888,
+      originalPrice: 9000,
       category: "mattress",
       subcategory: "hotel",
-      image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      image: "/images/products/R666/front.png",
       images: [
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
-        "https://images.unsplash.com/photo-1617325247661-69c5631e9aa7",
-        "https://images.unsplash.com/photo-1616594039964-ae90fc752431",
+        "/images/products/R666/front.png",
+        "/images/products/R666/side.png",
+        "/images/products/R666/front.png",
       ],
       specifications: {
         springType: "独立袋装弹簧（六环）",
@@ -91,24 +97,27 @@ async function main() {
     },
     {
       code: "R888",
-      name: "皇室百兰 R888 高端酒店床垫",
-      nameEn: "Royal Baland R888 Premium Hotel Mattress",
-      nameJa: "ロイヤルバランド R888 高級ホテルマットレス",
+      name: "皇室百兰 R888 尊耀五星床垫",
+      nameEn: "Royal Baland R888 Prestige Five-Star Mattress",
+      nameJa: "ロイヤルバランド R888 プレスティージュファイブスターマットレス",
+      subtitle: "助弓加固系统 · 双重防火标准 · 五星级酒店专享",
+      subtitleEn: "Reinforced bow system · Dual fire standards · Five-star hotel exclusive",
+      subtitleJa: "助弓補強システム · 二重防火基準 · 五つ星ホテル専用",
       description:
-        "高端五星级酒店专用床垫，独立袋装弹簧配合助弓加固系统，5cm对开山体树脂棉双层结构，超厚隔音棉被，符合英国BS7177及美国CFR1633防火标准，为华侨城洲际、静思园豪生等五星级酒店指定供应商。",
+        "高端五星级酒店专用床垫，独立袋装弹簧配合16个助弓加固系统，5cm对开山体树脂棉双层结构，超厚隔音棉被。符合英国BS7177及美国CFR1633双重防火标准，为华侨城洲际、静思园豪生等五星级酒店指定供应商。",
       descriptionEn:
-        "Premium five-star hotel mattress with independent pocket springs and reinforced bow system, 5cm dual-layer mountain resin cotton, extra-thick soundproof cotton. Complies with UK BS7177 and US CFR1633 fire standards. Designated supplier for InterContinental and Hilton hotels.",
+        "A premium five-star hotel mattress featuring independent pocket springs with 16 reinforced bows, dual-layer 5cm mountain resin cotton, and extra-thick soundproof padding. Complies with UK BS7177 and US CFR1633 fire standards. Designated supplier for leading five-star hotels.",
       descriptionJa:
-        "高級五つ星ホテル専用マットレス、独立袋装スプリングと助弓補強システム、5cm対開山体樹脂棉二層構造、超厚防音綿。英国BS7177及び米国CFR1633防火基準に適合。",
-      price: 9999,
-      originalPrice: 15999,
+        "高級五つ星ホテル専用マットレス。独立ポケットスプリングに16基の助弓補強を組み合わせ、5cm対開山体樹脂綿の二層構造と超厚防音パディングを採用。英国BS7177および米国CFR1633の二重防火基準に適合。五つ星ホテル向け指定供給。",
+      price: 3888,
+      originalPrice: 16000,
       category: "mattress",
       subcategory: "hotel",
-      image: "https://images.unsplash.com/photo-1522771753035-4a50423a5a63",
+      image: "/images/products/R888/front.png",
       images: [
-        "https://images.unsplash.com/photo-1522771753035-4a50423a5a63",
-        "https://images.unsplash.com/photo-1618221195719-dd68f397fbbd",
-        "https://images.unsplash.com/photo-1617103996702-96ff29b1c467",
+        "/images/products/R888/front.png",
+        "/images/products/R888/side.png",
+        "/images/products/R888/front.png",
       ],
       specifications: {
         springType: "独立袋装弹簧（六环）+ 助弓加固",
@@ -154,24 +163,27 @@ async function main() {
     },
     {
       code: "R999",
-      name: "皇室百兰 R999 总统套房床垫",
-      nameEn: "Royal Baland R999 Presidential Suite Mattress",
-      nameJa: "ロイヤルバランド R999 大統領スイートマットレス",
+      name: "皇室百兰 R999 至尊总统床垫",
+      nameEn: "Royal Baland R999 Supreme Presidential Mattress",
+      nameJa: "ロイヤルバランド R999 サプリームプレジデンシャルマットレス",
+      subtitle: "ABC智能调节系统 · 27种组合 · 总统套房级尊享",
+      subtitleEn: "ABC smart adjust system · 27 combinations · Presidential-suite luxury",
+      subtitleJa: "ABCスマート調整システム · 27通りの組合せ · 大統領スイート級の贅沢",
       description:
-        "旗舰级总统套房床垫，采用进口阻燃织锦面料，多层5cm对开山体树脂棉，高密度树脂棉，超厚隔音棉被双层结构，独立筒袋装床网核心支撑。独有ABC三种软硬度可调节系统，27种不同组合，满足不同睡眠习惯。博鳌国宾馆总统别墅指定供应商。",
+        "旗舰级总统套房床垫，采用进口阻燃织锦面料，多层5cm对开山体树脂棉，超厚隔音棉被双层结构。独有ABC三种软硬度可调节系统，27种不同组合，满足不同睡眠习惯。博鳌国宾馆总统别墅指定供应商。",
       descriptionEn:
-        "Flagship presidential suite mattress featuring imported flame-retardant brocade fabric, multiple layers of 5cm mountain resin cotton, high-density resin cotton, dual-layer extra-thick soundproof cotton, independent pocket spring core. Exclusive ABC adjustable firmness system with 27 different combinations. Designated supplier for Boao National Hotel Presidential Villa.",
+        "A flagship presidential-suite mattress featuring imported flame-retardant brocade fabric, multiple layers of 5cm mountain resin cotton, and dual-layer extra-thick soundproof padding. Exclusive ABC adjustable firmness system offers 27 combinations to fit different sleep preferences. Designated supplier for presidential villas.",
       descriptionJa:
-        "旗艦級大統領スイートマットレス、輸入難燃織錦生地、複数層5cm山体樹脂棉、高密度樹脂綿、超厚防音綿二層構造、独立筒袋装床網コアサポート。独自のABC三種類軟硬度調整可能システム、27種異なる組合せ。",
-      price: 15999,
-      originalPrice: 25999,
+        "旗艦級の大統領スイートマットレス。輸入難燃織錦生地と多層5cm山体樹脂綿、超厚防音パディング（二層）を採用。独自のABC三種類の硬さ調整システムで27通りの組合せを実現し、睡眠習慣に合わせて最適化。国賓館級施設向け指定供給。",
+      price: 5888,
+      originalPrice: 26000,
       category: "mattress",
       subcategory: "hotel",
-      image: "https://images.unsplash.com/photo-1590523741831-ab7f850fb9b4",
+      image: "/images/products/R999/front.png",
       images: [
-        "https://images.unsplash.com/photo-1590523741831-ab7f850fb9b4",
-        "https://images.unsplash.com/photo-1616594039964-ae90fc752431",
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+        "/images/products/R999/front.png",
+        "/images/products/R999/side.png",
+        "/images/products/R999/front.png",
       ],
       specifications: {
         springType: "独立筒袋装床网 + ABC可调节系统",
@@ -247,6 +259,9 @@ async function main() {
         name: p.name,
         nameEn: p.nameEn,
         nameJa: p.nameJa,
+        subtitle: p.subtitle,
+        subtitleEn: p.subtitleEn,
+        subtitleJa: p.subtitleJa,
         description: p.description,
         descriptionEn: p.descriptionEn,
         descriptionJa: p.descriptionJa,
@@ -271,6 +286,9 @@ async function main() {
         name: p.name,
         nameEn: p.nameEn,
         nameJa: p.nameJa,
+        subtitle: p.subtitle,
+        subtitleEn: p.subtitleEn,
+        subtitleJa: p.subtitleJa,
         description: p.description,
         descriptionEn: p.descriptionEn,
         descriptionJa: p.descriptionJa,
