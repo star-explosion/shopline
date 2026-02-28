@@ -17,11 +17,28 @@ model User {
 
 model Product {
   id          Int         @id @default(autoincrement())
+  code        String?     @unique
   name        String
+  nameEn      String      @default("")
+  nameJa      String      @default("")
   description String
+  descriptionEn String    @default("")
+  descriptionJa String    @default("")
   price       Float
+  originalPrice Float     @default(0)
   image       String
   images      String      @default("[]")
+  category    String      @default("mattress")
+  subcategory String      @default("hotel")
+  specifications String   @default("{}")
+  features    String      @default("[]")
+  isFeatured  Boolean     @default(false)
+  isBestSeller Boolean    @default(false)
+  isNewArrival Boolean    @default(false)
+  rating      Float       @default(4.8)
+  reviewCount Int         @default(0)
+  warranty    String      @default("")
+  deliveryTime String     @default("")
   stock       Int         @default(0)
   createdAt   DateTime    @default(now())
   orderItems  OrderItem[]

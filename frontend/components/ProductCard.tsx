@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Product } from "@/types";
 import { useCart } from "@/context/CartContext";
 import { Link } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 
 interface ProductCardProps {
   product: Product;
@@ -15,8 +16,21 @@ function computeOriginalPrice(price: number): number {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const { addItem, openDrawer } = useCart();
+  const locale = useLocale();
   const originalPrice = computeOriginalPrice(product.price);
   const savings = originalPrice - product.price;
+  const name =
+    locale === "en"
+      ? product.nameEn || product.name
+      : locale === "ja"
+        ? product.nameJa || product.name
+        : product.name;
+  const description =
+    locale === "en"
+      ? product.descriptionEn || product.description
+      : locale === "ja"
+        ? product.descriptionJa || product.description
+        : product.description;
 
   function handleAdd() {
     addItem(product);
@@ -29,7 +43,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="relative w-full aspect-[4/3] overflow-hidden bg-[#EDE9E3]">
           <Image
             src={product.image}
-            alt={product.name}
+            alt={name}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-700"
             sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
@@ -46,11 +60,11 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className="p-4 sm:p-5 space-y-3">
         <Link href={`/products/${product.id}`}>
           <h3 className="font-semibold text-[#111111] text-sm leading-snug hover:text-[#C6A86B] transition-colors">
-            {product.name}
+            {name}
           </h3>
         </Link>
         <p className="text-xs text-[#6B6B6B] line-clamp-2 leading-relaxed">
-          {product.description}
+          {description}
         </p>
 
         <div className="space-y-1 pt-1">

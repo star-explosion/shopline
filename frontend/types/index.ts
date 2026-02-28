@@ -1,10 +1,27 @@
 export interface Product {
   id: number;
+  code?: string | null;
   name: string;
+  nameEn?: string;
+  nameJa?: string;
   description: string;
+  descriptionEn?: string;
+  descriptionJa?: string;
   price: number;
+  originalPrice?: number;
   image: string;
   images: string[];
+  category?: string;
+  subcategory?: string;
+  specifications?: Record<string, unknown>;
+  features?: string[];
+  isFeatured?: boolean;
+  isBestSeller?: boolean;
+  isNewArrival?: boolean;
+  rating?: number;
+  reviewCount?: number;
+  warranty?: string;
+  deliveryTime?: string;
   stock: number;
   createdAt: string;
 }

@@ -1,10 +1,29 @@
 import { Request, Response } from "express";
 import { prisma } from "../prisma/client";
 
-function parseProductImages<T extends { images: string }>(product: T) {
+function safeJsonParse<T>(value: string | null | undefined, fallback: T): T {
+  if (!value) return fallback;
+  try {
+    return JSON.parse(value) as T;
+  } catch {
+    return fallback;
+  }
+}
+
+function parseProductFields<
+  T extends { images: string; features?: string | null; specifications?: string | null }
+>(product: T) {
   return {
     ...product,
-    images: JSON.parse(product.images || "[]") as string[],
+    images: safeJsonParse<string[]>(product.images, []),
+    features: safeJsonParse<string[]>(
+      (product.features ?? undefined) as string | undefined,
+      []
+    ),
+    specifications: safeJsonParse<Record<string, unknown>>(
+      (product.specifications ?? undefined) as string | undefined,
+      {}
+    ),
   };
 }
 
@@ -19,7 +38,7 @@ export async function getProducts(req: Request, res: Response) {
       prisma.product.count(),
     ]);
 
-    res.json({ products: products.map(parseProductImages), total, page, limit });
+    res.json({ products: products.map(parseProductFields), total, page, limit });
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch products" });
   }
@@ -35,7 +54,7 @@ export async function getProductById(req: Request, res: Response) {
       return;
     }
 
-    res.json(parseProductImages(product));
+    res.json(parseProductFields(product));
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch product" });
   }

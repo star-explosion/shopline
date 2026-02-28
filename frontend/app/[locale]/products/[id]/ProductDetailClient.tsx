@@ -19,6 +19,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { trackEvent, trackCTAClick } from "@/lib/analytics";
 import { useScrollDepth } from "@/hooks/useScrollDepth";
+import { useLocale } from "next-intl";
 
 interface Props {
   product: Product;
@@ -35,6 +36,7 @@ function computeOriginalPrice(price: number): number {
 
 export default function ProductDetailClient({ product }: Props) {
   const { addItem, openDrawer } = useCart();
+  const locale = useLocale();
   const t = useTranslations("products");
   const td = useTranslations("productDetail");
   const tc = useTranslations("cart");
@@ -62,14 +64,36 @@ export default function ProductDetailClient({ product }: Props) {
   const savings = originalPrice - product.price;
   const isLowStock = product.stock > 0 && product.stock <= 15;
 
-  function getTagline(name: string): string {
-    if (name.includes("R-666")) return td("taglines.R666");
-    if (name.includes("R-888")) return td("taglines.R888");
-    if (name.includes("R-999")) return td("taglines.R999");
+  function inferCode(): "R666" | "R888" | "R999" | null {
+    const raw = (product.code || product.name || "").toUpperCase();
+    if (raw.includes("R666") || raw.includes("R-666")) return "R666";
+    if (raw.includes("R888") || raw.includes("R-888")) return "R888";
+    if (raw.includes("R999") || raw.includes("R-999")) return "R999";
+    return null;
+  }
+
+  function getTagline(code: "R666" | "R888" | "R999" | null): string {
+    if (code === "R666") return td("taglines.R666");
+    if (code === "R888") return td("taglines.R888");
+    if (code === "R999") return td("taglines.R999");
     return td("taglines.default");
   }
 
-  const tagline = getTagline(product.name);
+  const code = inferCode();
+  const tagline = getTagline(code);
+
+  const name =
+    locale === "en"
+      ? product.nameEn || product.name
+      : locale === "ja"
+        ? product.nameJa || product.name
+        : product.name;
+  const description =
+    locale === "en"
+      ? product.descriptionEn || product.description
+      : locale === "ja"
+        ? product.descriptionJa || product.description
+        : product.description;
 
   const KEY_BENEFITS = [
     td("benefits.hotel"),
@@ -145,7 +169,7 @@ export default function ProductDetailClient({ product }: Props) {
                   皇室百兰 · ROYAL BALAND
                 </p>
                 <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl text-[#111111] leading-snug mb-3">
-                  {product.name}
+                  {name}
                 </h1>
                 <p className="text-sm text-[#6B6B6B] italic leading-relaxed">
                   {tagline}
@@ -197,7 +221,7 @@ export default function ProductDetailClient({ product }: Props) {
               </ul>
 
               {/* Description */}
-              <p className="text-sm text-[#6B6B6B] leading-relaxed">{product.description}</p>
+              <p className="text-sm text-[#6B6B6B] leading-relaxed">{description}</p>
 
               {/* Stock indicator */}
               <div className="flex items-center gap-2">
