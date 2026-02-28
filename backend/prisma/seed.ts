@@ -113,11 +113,11 @@ async function main() {
       originalPrice: 16000,
       category: "mattress",
       subcategory: "hotel",
-      image: "/images/products/R888/front.png",
+      image: "/images/products/R999/front.png",
       images: [
-        "/images/products/R888/front.png",
-        "/images/products/R888/side.png",
-        "/images/products/R888/front.png",
+        "/images/products/R999/front.png",
+        "/images/products/R999/side.png",
+        "/images/products/R999/front.png",
       ],
       specifications: {
         springType: "独立袋装弹簧（六环）+ 助弓加固",
@@ -179,11 +179,11 @@ async function main() {
       originalPrice: 26000,
       category: "mattress",
       subcategory: "hotel",
-      image: "/images/products/R999/front.png",
+      image: "/images/products/R888/front.png",
       images: [
-        "/images/products/R999/front.png",
-        "/images/products/R999/side.png",
-        "/images/products/R999/front.png",
+        "/images/products/R888/front.png",
+        "/images/products/R888/side.png",
+        "/images/products/R888/front.png",
       ],
       specifications: {
         springType: "独立筒袋装床网 + ABC可调节系统",
